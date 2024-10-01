@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 
 import { z } from "zod";
@@ -19,6 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 
 import { contactInfo } from "@/constant";
+import emailjs from "@emailjs/browser";
 
 type Props = {};
 
@@ -49,7 +50,38 @@ const Contact = (props: Props) => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const data = {
+      service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
+      template_params: {
+        nom: values.nom,
+        prenom: values.prenom,
+        email: values.email,
+        message: values.message,
+      },
+    };
+    try {
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send email");
+      } else {
+        alert(
+          `Merci nous avons recu votre message ${values.nom} ${values.prenom}`
+        );
+      }
+
+      const resData = await res.json();
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
