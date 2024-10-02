@@ -16,7 +16,7 @@ async function fecthData(lastPageNum: number = 0) {
   }] {
   title,
   description,
-  createdAt,
+  _createdAt,
   "slug":slug.current,
   "imageUrl": image.asset->url
 }`;
@@ -52,7 +52,8 @@ const Blog = async ({
   const pageNum = Number(searchParams?.page ?? 0);
   const data: BlogArticle[] = await fecthData(pageNum);
   const postsNum = await getTotalPosts();
-  const Categories: CategorySchema[] = await fetchCategory();
+  // const Categories: CategorySchema[] = await fetchCategory();
+
   return (
     <Gutter>
       {/* Hero */}

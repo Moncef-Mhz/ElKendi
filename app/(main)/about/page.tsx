@@ -4,20 +4,9 @@ import { Button } from "@/components/ui/button";
 import { HR } from "@/components/ui/hr";
 import { Download } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-// import {saveAs} from 'file-saver'
 
-type Props = {};
-
-const page = (props: Props) => {
-  const downloadFile = () => {
-    const URL = "/bilan.html";
-    if (typeof window !== "undefined") {
-      window.location.href = URL;
-    }
-  };
-
+const page = () => {
   return (
     <Gutter>
       <div className="mt-10 ">
@@ -32,7 +21,6 @@ const page = (props: Props) => {
       <div className="flex items-center justify-center w-full">
         <Badge />
       </div>
-
       <div className="">
         <div className="flex lg:flex-row flex-col w-full gap-4 ">
           <h1 className="text-3xl xl:text-4xl font-semibold lg:w-[50%]">
