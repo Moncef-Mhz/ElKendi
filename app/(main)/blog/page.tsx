@@ -59,20 +59,14 @@ const Blog = async ({
       {/* Hero */}
       <div className="w-full my-10 flex flex-col items-center justify-center gap-4">
         <h1 className="text-3xl text-center xl:text-right xl:text-4xl font-semibold">
-          Découvrez nos conseils santé
+          Our Activities and Presentations
         </h1>
         <p className="text-base text-hover text-center xl:text-right">
-          Suivez le blog d'Elkendi Pharmacy pour des articles, astuces, et
-          informations sur votre bien-être au quotidien.
+          Follow the SPA El Kendi Pharmacy Participation Committee blog for
+          articles, tips, and information on daily well-being.
         </p>
       </div>
       <HR />
-      {/* Map throught Category */}
-      {/* <div className="my-10 flex flex-row flex-wrap gap-4">
-        {Categories.map((item) => (
-          <Category title={item.title} key={item.title} />
-        ))}
-      </div> */}
       {/* Map throught data */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
         {data.map((item) => (

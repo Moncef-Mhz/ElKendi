@@ -2,17 +2,17 @@ import { Phone, MapPin, Mail } from "lucide-react";
 
 const contactInfo = [
   {
-    title: "Appelez-nous",
+    title: "Call us",
     icon: <Phone size={24} />,
     content: "+213 770 53 13 92",
   },
   {
-    title: "Envoyez-nous un Email",
+    title: "Send us an Email",
     icon: <Mail size={24} />,
-    content: "cp.kendi@elkendi.com",
+    content: "ahmed.mechbiche@elkendi.com",
   },
   {
-    title: "Venez à nous",
+    title: "Come to us",
     icon: <MapPin size={24} />,
     content:
       " N°19 Zone d’activité el Boustane, commune de Rahmania 16121 Alger –Algérie",

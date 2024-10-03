@@ -24,18 +24,17 @@ type Props = {};
 export const revalidate = 60;
 
 async function LatestArticle({}: Props) {
-  //getting data
   const data: BlogArticle[] = await fecthData();
 
   return (
     <section className="my-10 mb-2 flex flex-col gap-8">
       <div className="flex w-full justify-between items-center">
-        <h1 className="text-3xl xl:text-4xl font-semibold">Dernier article</h1>
+        <h1 className="text-3xl xl:text-4xl font-semibold">Latest Action</h1>
         <Link
           href={"/blog"}
           className="text-sm xl:text-base flex items-center  hover:text-hover duration-100"
         >
-          Voir tout
+          See All
           <ChevronRight size={16} />
         </Link>
       </div>

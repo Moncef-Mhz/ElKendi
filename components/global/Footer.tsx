@@ -8,7 +8,9 @@ export default function Footer() {
       <Gutter className="py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="space-y-4">
-            <h2 className="text-xl xl:text-2xl font-bold">El Kendi Comite</h2>
+            <h2 className="text-xl xl:text-2xl font-bold">
+              El Kendi Committee
+            </h2>
             <p className="text-time">
               We are dedicated to providing the best service to our customers.
             </p>
@@ -33,8 +35,8 @@ export default function Footer() {
               <p>N°19 Zone d’activité el Boustane</p>
               <p>Alger, Algérie</p>
               <p>
-                <strong className="text-text">Email:</strong>
-                cp.kendi@elkendi.com
+                <strong className="text-text">Email: </strong>
+                ahmed.mechbiche@elkendi.com
               </p>
               <p>
                 <strong className="text-text">Phone:</strong> +213 770 53 13 92
@@ -44,7 +46,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t text-hover text-sm border-[#cccccc30] text-center">
           <p>
-            &copy; {new Date().getFullYear()} El Kendi. All rights reserved.
+            &copy; {new Date().getFullYear()} CP ElKendi. All rights reserved.
           </p>
         </div>
       </Gutter>

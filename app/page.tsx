@@ -10,15 +10,18 @@ export default function Home() {
   return (
     <div>
       <Gutter>
+        <div className="w-full  flex-col lg:-space-y-4 flex items-center mb-10 justify-center">
+          <Badge />
+          <h1 className="text-2xl lg:text-3xl font-bold text-center">
+            El Kendi Participation Committee
+          </h1>
+        </div>
+        <HR />
         <Hero />
         <HR />
         <About />
         <HR />
         <LatestArticle />
-        <HR />
-        <div className="w-full flex items-center justify-center">
-          <Badge />
-        </div>
         <HR />
         <Contact />
       </Gutter>

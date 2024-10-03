@@ -27,47 +27,45 @@ const page = () => {
             El Kendi:
           </h1>
           <p className="text-base text-hover lg:w-[50%] leading-relaxed">
-            <strong>El Kendi</strong> est une entreprise pharmaceutique opérant
-            en Algérie, spécialisée dans la production, la distribution et le
-            développement de médicaments de haute qualité. L'entreprise joue un
-            rôle clé dans le secteur de la santé en offrant des médicaments sur
-            ordonnance et en vente libre, contribuant ainsi à l'amélioration de
-            la santé et du bien-être de la population. Avec un fort engagement
-            envers la responsabilité sociétale, El Kendi participe activement à
-            des initiatives sociales et culturelles à travers son Comité de
-            Participation, assurant ainsi le bien-être de ses employés et de la
-            communauté. L'entreprise s'engage à innover, à garantir la sécurité
-            et à améliorer continuellement les normes de soins de santé en
-            Algérie.
+            <strong>El Kendi</strong> is a pharmaceutical company operating in
+            Algeria, specializing in the production, distribution and
+            development of high-quality medicines. The company plays a key role
+            in the healthcare sector by offering prescription and
+            over-the-counter medicines, thus contributing to the improvement of
+            the health and well-being of the population. With a strong
+            commitment to social responsibility, El Kendi actively participates
+            in social and cultural initiatives through its Participation
+            Committee, thus ensuring the well-being of its employees and the
+            community. The company is committed to innovating, ensuring safety
+            and continuously improving healthcare standards in Algeria.
           </p>
         </div>
         <HR className="my-10" />
         <div className="flex lg:flex-row flex-col w-full gap-4">
           <h1 className="text-3xl xl:text-4xl font-semibold lg:w-[50%]">
-            Le comité de participation:
+            The participation committee:
           </h1>
           <p className="text-base text-hover lg:w-[50%] leading-relaxed">
-            Le comité de participation (CP)  est une institution représentative
-            du personnel rendue obligatoire dans toutes les entreprises de plus
-            de 20 salariés. Le C.P. intervient dans la mise en place d’œuvres
-            sociales et culturelles dans l’entreprise. Il participe également à
-            la gestion de son activité économique, dans les conditions décrétées
-            par le code du Travail. Mais quel que soit le champ d’action sur
-            lequel il intervient, son but est toujours d’agir au profit des
-            salariés et de leur famille, ainsi que les familles des salariés
-            décédés.
+            The participation committee (CP) is a staff representative
+            institution that is mandatory in all companies with more than 20
+            employees. The CP is involved in setting up social and cultural
+            works in the company. It also participates in the management of its
+            economic activity, under the conditions set out by the Labor Code.
+            But whatever the field of action in which it intervenes, its goal is
+            always to act for the benefit of employees and their families, as
+            well as the families of deceased employees.
           </p>
         </div>
         <HR className="my-10" />
 
         <div className="flex lg:flex-row flex-col w-full gap-4">
           <h1 className="text-3xl xl:text-4xl font-semibold lg:w-[50%]">
-            Notre Comité de participation:
+            Our Participation Committee:
           </h1>
           <div className="text-base text-hover lg:w-[50%] leading-relaxed">
             <p>
-              Pour ce qui est du comité de participation pour sa deuxieme mondat
-              d’installation a été comme suit:
+              As for the participation committee for its second world of
+              installation was as follows:
             </p>
             <br />
             <ul className="ml-5 list-disc">
@@ -80,10 +78,10 @@ const page = () => {
             </ul>
             <br />
             <p>
-              Le comité de Participation a connu une réorganisation le
-              13/04/2022, suite a la démission du Président et le Vice-Président
-              du bureau Comité de Participation, dont la composition est comme
-              suit:
+              The Participation Committee underwent a reorganization on
+              04/13/2022, following the resignation of the President and the
+              Vice-President of the Participation Committee office, whose
+              composition is as follows:
             </p>
             <br />
             <ul className="ml-5 list-disc">
@@ -100,7 +98,7 @@ const page = () => {
         <HR className="my-10" />
         <div className="flex lg:flex-row flex-col  w-full gap-4">
           <h1 className="text-3xl xl:text-4xl font-semibold lg:w-[50%]">
-            Telecharger le bilan
+            Download the report
           </h1>
 
           <form
@@ -109,7 +107,7 @@ const page = () => {
             className="text-base text-hover lg:w-[50%] "
           >
             <Button className="leading-relaxed flex items-center gap-1">
-              Telecharger
+              Download
               <Download />
             </Button>
           </form>

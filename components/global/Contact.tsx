@@ -74,7 +74,7 @@ const Contact = (props: Props) => {
         throw new Error("Failed to send email");
       } else {
         alert(
-          `Merci nous avons recu votre message ${values.nom} ${values.prenom}`
+          `Thank you, we have received your message. ${values.nom} ${values.prenom}`
         );
       }
 
@@ -90,10 +90,10 @@ const Contact = (props: Props) => {
         <div className="w-full p-8 border border-[#cccccc30] rounded-md flex flex-col gap-4">
           {/* contact header */}
           <div className="flex flex-col gap-2 w-full ">
-            <h1 className="text-2xl font-semibold">Contactez-nous</h1>
+            <h1 className="text-2xl font-semibold">Contact Us</h1>
             <p className="text-base text-hover">
-              Besoin d'aide ou de conseils ? Contactez-nous par téléphone,
-              e-mail, ou passez nous voir en pharmacie.
+              Need help or advice? Contact us by phone, e-mail, or visit us at
+              the pharmacy.
             </p>
           </div>
           {/* contact form */}
@@ -166,7 +166,7 @@ const Contact = (props: Props) => {
                 )}
               />
               <Button type="submit" className="w-full">
-                envoyez
+                Send
               </Button>
             </form>
           </Form>
@@ -186,7 +186,7 @@ const Contact = (props: Props) => {
             </div>
           ))}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12790.899431410211!2d3.1679266999999998!3d36.729168699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sdz!4v1727694026461!5m2!1sfr!2sdz"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25598.02885737252!2d2.89541073476562!3d36.68042479999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fa5c069f0a37f%3A0xbb8fa3369e513d44!2sEl-Kendi%20Industrie%20du%20M%C3%A9dicament!5e0!3m2!1sfr!2sdz!4v1727953522847!5m2!1sfr!2sdz"
             className="w-full h-full border border-[#cccccc30] p-2 rounded-md"
             loading="lazy"
           ></iframe>

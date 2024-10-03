@@ -31,7 +31,7 @@ function ArticleCard({ title, description, slug, image, createdAt }: Props) {
         width={500}
         height={500}
         alt={title}
-        className="rounded max-h-[350px] xl:max-h-[400px] object-cover"
+        className="rounded max-h-[350px] h-[350px] xl:h-[400px] xl:max-h-[400px] object-cover"
       />
       <div className="p-2 flex flex-col gap-3">
         <p className="font-normal text-sm text-time">

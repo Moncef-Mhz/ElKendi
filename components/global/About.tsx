@@ -1,5 +1,4 @@
 import React from "react";
-import { Gutter } from "./Gutter";
 
 type Props = {};
 
@@ -7,19 +6,18 @@ function About({}: Props) {
   return (
     <div className="my-10 flex lg:flex-row flex-col w-full gap-4 ">
       <h1 className="text-3xl xl:text-4xl font-semibold lg:w-[50%] ">
-        Qui sommes-nous
+        Who are we
       </h1>
       <p className="text-base text-hover lg:w-[50%] leading-relaxed">
-        Le comité de participation (CP) est une institution représentative du
-        personnel, rendue obligatoire dans toutes les entreprises de plus de 20
-        salariés. Nous jouons un rôle crucial dans la mise en place des œuvres
-        sociales et culturelles au sein de l'entreprise, en veillant à ce que
-        celles-ci bénéficient directement aux salariés et à leurs familles. Nous
-        intervenons également dans la gestion de l'activité économique de
-        l'entreprise, conformément aux dispositions du code du Travail. Quel que
-        soit le domaine sur lequel nous agissons, notre objectif principal reste
-        toujours d'améliorer le bien-être des employés, de leurs proches, ainsi
-        que des familles des salariés décédés.
+        The participation committee (CP) is a staff representative institution,
+        made mandatory in all companies with more than 20 employees. We play a
+        crucial role in setting up social and cultural works within the company,
+        ensuring that they directly benefit employees and their families. We
+        also intervene in the management of the company's economic activity, in
+        accordance with the provisions of the Labor Code. Whatever the area in
+        which we act, our main objective always remains to improve the
+        well-being of employees, their loved ones, as well as the families of
+        deceased employees.
       </p>
     </div>
   );

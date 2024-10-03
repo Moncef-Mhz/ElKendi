@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { Gutter } from "./Gutter";
 import { client } from "@/app/lib/sanity";
 import { BlogArticle } from "@/app/lib/interface";
 import moment from "moment";
@@ -20,6 +19,8 @@ async function fecthData() {
 }
 
 type Props = {};
+
+export const revalidate = 60;
 
 async function Hero({}: Props) {
   const data: BlogArticle[] = await fecthData();
@@ -46,7 +47,7 @@ async function Hero({}: Props) {
               {item.title}
             </h1>
             <p className="text-base xl:text-lg font-medium">
-              par Mechbich Ahmde
+              By Mechbich Ahmde
             </p>
           </div>
         </Link>
