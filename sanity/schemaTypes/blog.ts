@@ -23,7 +23,7 @@ export default {
       },
     },
     {
-      name: "categories",
+      name: "category",
       title: "Category de l'article",
       type: "array",
       of: [

@@ -23,9 +23,10 @@ async function Hero({}: Props) {
 
   return (
     <div className="my-10 grid  grid-cols-1 md:grid-cols-2 w-full gap-10">
-      {categories.map((item) => (
+      {categories.map((item, index) => (
         <Link
-          href={`/category/query?=${item.title.toLowerCase()}`}
+          href={`/category?query=${item.title.toLowerCase()}`}
+          key={index}
           className="w-full relative group rounded-md cursor-pointer overflow-hidden flex items-center h-[200px] xl:h-[300px] justify-center"
         >
           {item.imageUrl && (

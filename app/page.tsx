@@ -28,16 +28,3 @@ export default function Home() {
     </div>
   );
 }
-{
-  /* {
-   data.map((post, idx) => (
-     <ArticleCard
-       title={post.title}
-       description={post.description}
-       slug={post.slug}
-       image={post.imageUrl}
-       key={idx}
-     />
-   ));
- } */
-}

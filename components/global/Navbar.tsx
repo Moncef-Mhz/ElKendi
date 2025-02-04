@@ -14,7 +14,7 @@ function Navbar({}: Props) {
   const [OpenMenu, setOpenMenu] = useState(false);
 
   return (
-    <Gutter className="w-full h-[80px] relative flex items-center justify-between">
+    <Gutter className="w-full z-[20] h-[80px] relative flex items-center justify-between">
       {/* Logo */}
       <Link href={"/"} className="">
         <Image
@@ -28,12 +28,12 @@ function Navbar({}: Props) {
 
       {/* Nav-Desktop */}
       <div className="md:flex items-center gap-4 hidden">
-        <ul className="flex items-center justify-between gap-6">
+        <ul className="flex items-center justify-between gap-10">
           {navlinks.map((item) => (
             <Link
               key={item.name}
               href={item.link}
-              className="text-text hover:text-hover text-lg duration-100"
+              className="text-text hover:text-hover text-base duration-100"
             >
               {item.name}
             </Link>
