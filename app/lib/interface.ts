@@ -16,4 +16,5 @@ export interface fullBlog {
 
 export interface CategorySchema {
   title: string;
+  imageUrl: string;
 }

@@ -1,16 +1,12 @@
 import Image from "next/image";
-import React from "react";
 import { client } from "@/app/lib/sanity";
-import { BlogArticle } from "@/app/lib/interface";
-import moment from "moment";
+import { CategorySchema } from "@/app/lib/interface";
 import Link from "next/link";
+
 //fetch data
 async function fecthData() {
-  const query = `*[_type == 'blog'] | order(_createdAt desc)[2...4]{
+  const query = `*[_type == 'category' && title != 'All']{
   title,
-  description,
-  _createdAt,
-  "slug":slug.current,
   "imageUrl": image.asset->url
 }`;
 
@@ -23,33 +19,28 @@ type Props = {};
 export const revalidate = 60;
 
 async function Hero({}: Props) {
-  const data: BlogArticle[] = await fecthData();
+  const categories: CategorySchema[] = await fecthData();
+
   return (
-    <div className="flex my-10 md:flex-row flex-col  gap-10">
-      {data.map((item) => (
+    <div className="my-10 grid  grid-cols-1 md:grid-cols-2 w-full gap-10">
+      {categories.map((item) => (
         <Link
-          href={`/blog/${item.slug}`}
-          key={item.title}
-          className="w-full flex flex-col gap-6 "
+          href={`/category/query?=${item.title.toLowerCase()}`}
+          className="w-full relative group rounded-md cursor-pointer overflow-hidden flex items-center h-[200px] xl:h-[300px] justify-center"
         >
-          <Image
-            src={item.imageUrl}
-            alt={item.title}
-            width={800}
-            height={800}
-            className="xl:h-[600px] h-[400px] object-cover w-full rounded-md"
-          />
-          <div className="flex flex-col gap-2 pb-2 px-2">
-            <p className="text-sm xl:text-base text-time">
-              {moment(item._createdAt).format("MMM Do YY")}
-            </p>
-            <h1 className="text-lg xl:text-3xl font-bold hover:underline hover:underline-offset-2 duration-150">
-              {item.title}
-            </h1>
-            <p className="text-base xl:text-lg font-medium">
-              By Mechbich Ahmde
-            </p>
-          </div>
+          {item.imageUrl && (
+            <Image
+              src={item?.imageUrl}
+              alt={item.title}
+              width={200}
+              height={200}
+              className="object-cover w-full  h-full"
+            />
+          )}
+          <div className="bg-black/50 absolute w-full inset-0 h-full group-hover:opacity-100 opacity-0 duration-150" />
+          <h1 className="absolute text-white text-xl font-bold group-hover:underline opacity-0 group-hover:opacity-100 duration-150 capitalize  m-4">
+            {item.title}
+          </h1>
         </Link>
       ))}
     </div>
