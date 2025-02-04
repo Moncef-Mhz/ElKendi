@@ -1,7 +1,6 @@
 import { BlogArticle, CategorySchema } from "@/app/lib/interface";
 import { client } from "@/app/lib/sanity";
 import { Gutter } from "@/components/global/Gutter";
-import category from "@/sanity/schemaTypes/category";
 import Image from "next/image";
 import Link from "next/link";
 

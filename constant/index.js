@@ -29,10 +29,6 @@ const navlinks = [
     link: "/blog",
   },
   {
-    name: "Category",
-    link: "/cateogry",
-  },
-  {
     name: "À Propos",
     link: "/about",
   },
