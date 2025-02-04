@@ -2,26 +2,26 @@ import { Phone, MapPin, Mail } from "lucide-react";
 
 const contactInfo = [
   {
-    title: "Call us",
+    title: "Appelez-nous",
     icon: <Phone size={24} />,
     content: "+213 770 53 13 92",
   },
   {
-    title: "Send us an Email",
+    title: "Envoyez-nous un message",
     icon: <Mail size={24} />,
     content: "ahmed.mechbiche@elkendi.com",
   },
   {
-    title: "Come to us",
+    title: "Venez nous voir",
     icon: <MapPin size={24} />,
     content:
-      " N°19 Zone d’activité el Boustane, commune de Rahmania 16121 Alger –Algérie",
+      "N°19 Zone d’activité El Boustane, commune de Rahmania 16121 Alger – Algérie",
   },
 ];
 
 const navlinks = [
   {
-    name: "Home",
+    name: "Accueil",
     link: "/",
   },
   {
@@ -29,13 +29,9 @@ const navlinks = [
     link: "/blog",
   },
   {
-    name: "About",
+    name: "À Propos",
     link: "/about",
   },
-  // {
-  //   name: "Services",
-  //   link: "/services",
-  // },
   {
     name: "Contact",
     link: "/#contact",

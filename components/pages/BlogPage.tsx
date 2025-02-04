@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ArticleCard from "@/components/global/Card";
 import { Gutter } from "@/components/global/Gutter";
 import { BlogArticle, CategorySchema } from "@/app/lib/interface";
@@ -29,38 +29,49 @@ const BlogPage = ({
   const [postsNum, setPostsNum] = useState<number>(totalPosts);
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
 
+  const prevCategory = useRef(selectedCategory);
+  const prevPageNum = useRef(pageNum);
+
   useEffect(() => {
-    const url = new URL(window.location.href);
-    url.searchParams.set("filter", selectedCategory);
-    window.history.pushState({}, "", url.toString()); // Update URL without reload
+    if (
+      prevCategory.current !== selectedCategory ||
+      prevPageNum.current !== pageNum
+    ) {
+      prevCategory.current = selectedCategory;
+      prevPageNum.current = pageNum;
 
-    // Add fetching logic if category or page changes
-    const fetchData = async () => {
-      const res = await fetch(
-        `/api/blogData?page=${pageNum}&category=${selectedCategory}`
-      );
-      const result = await res.json();
-      setData(result.data);
-      setPostsNum(result.totalPosts);
-    };
+      const fetchData = async () => {
+        const res = await fetch(
+          `/api/blogData?page=${pageNum}&category=${selectedCategory}`
+        );
+        const result = await res.json();
+        setData(result.data);
+        setPostsNum(result.totalPosts);
+      };
 
-    fetchData();
+      fetchData();
+    }
   }, [selectedCategory, pageNum]);
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
   };
-  console.log(data);
+
+  if (data.length === 0) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Gutter>
       {/* Hero Section */}
       <div className="w-full my-10 flex flex-col items-center justify-center gap-4">
         <h1 className="text-3xl text-center xl:text-right xl:text-4xl font-semibold">
-          Découvrez nos conseils santé
+          Nos Activités et Présentations
         </h1>
         <p className="text-base text-hover text-center xl:text-right">
-          Suivez le blog d'Elkendi Pharmacy pour des articles, astuces, et
-          informations sur votre bien-être au quotidien.
+          Suivez le blog du Comité de Participation de la pharmacie SPA El Kendi
+          pour des articles, des astuces et des informations sur le bien-être au
+          quotidien.
         </p>
       </div>
       <HR />

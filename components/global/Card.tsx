@@ -30,6 +30,7 @@ function ArticleCard({ title, description, slug, image, createdAt }: Props) {
         src={image}
         width={500}
         height={500}
+        loading="lazy"
         alt={title}
         className="rounded max-h-[350px] h-[350px] xl:h-[400px] xl:max-h-[400px] object-cover"
       />

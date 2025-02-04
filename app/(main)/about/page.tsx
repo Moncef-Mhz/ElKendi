@@ -27,33 +27,34 @@ const page = () => {
             El Kendi:
           </h1>
           <p className="text-base text-hover lg:w-[50%] leading-relaxed">
-            <strong>El Kendi</strong> is a pharmaceutical company operating in
-            Algeria, specializing in the production, distribution and
-            development of high-quality medicines. The company plays a key role
-            in the healthcare sector by offering prescription and
-            over-the-counter medicines, thus contributing to the improvement of
-            the health and well-being of the population. With a strong
-            commitment to social responsibility, El Kendi actively participates
-            in social and cultural initiatives through its Participation
-            Committee, thus ensuring the well-being of its employees and the
-            community. The company is committed to innovating, ensuring safety
-            and continuously improving healthcare standards in Algeria.
+            <strong>El Kendi</strong> est une entreprise pharmaceutique opérant
+            en Algérie, spécialisée dans la production, la distribution et le
+            développement de médicaments de haute qualité. Elle joue un rôle clé
+            dans le secteur de la santé en proposant des médicaments sur
+            ordonnance et en vente libre, contribuant ainsi à l’amélioration de
+            la santé et du bien-être de la population. Avec un fort engagement
+            envers la responsabilité sociale, El Kendi participe activement à
+            des initiatives sociales et culturelles à travers son Comité de
+            Participation, veillant ainsi au bien-être de ses employés et de la
+            communauté. L’entreprise s’engage à innover, garantir la sécurité et
+            améliorer continuellement les standards de soins de santé en
+            Algérie.
           </p>
         </div>
         <HR className="my-10" />
         <div className="flex lg:flex-row flex-col w-full gap-4">
           <h1 className="text-3xl xl:text-4xl font-semibold lg:w-[50%]">
-            The participation committee:
+            Le comité de participation :
           </h1>
           <p className="text-base text-hover lg:w-[50%] leading-relaxed">
-            The participation committee (CP) is a staff representative
-            institution that is mandatory in all companies with more than 20
-            employees. The CP is involved in setting up social and cultural
-            works in the company. It also participates in the management of its
-            economic activity, under the conditions set out by the Labor Code.
-            But whatever the field of action in which it intervenes, its goal is
-            always to act for the benefit of employees and their families, as
-            well as the families of deceased employees.
+            Le comité de participation (CP) est une institution représentative
+            du personnel, obligatoire dans toutes les entreprises de plus de 20
+            employés. Le CP intervient dans la mise en place des œuvres sociales
+            et culturelles au sein de l’entreprise. Il participe également à la
+            gestion de son activité économique, dans les conditions prévues par
+            le Code du travail. Quel que soit son domaine d’action, son objectif
+            reste toujours d’agir au bénéfice des employés et de leurs familles,
+            ainsi que des familles des employés décédés.
           </p>
         </div>
         <HR className="my-10" />
@@ -93,24 +94,6 @@ const page = () => {
               <li>Mr Nadjmaoui Mohamed Rabah, Membre</li>
             </ul>
           </div>
-        </div>
-
-        <HR className="my-10" />
-        <div className="flex lg:flex-row flex-col  w-full gap-4">
-          <h1 className="text-3xl xl:text-4xl font-semibold lg:w-[50%]">
-            Download the report
-          </h1>
-
-          <form
-            method="get"
-            action={"/bilan.docx"}
-            className="text-base text-hover lg:w-[50%] "
-          >
-            <Button className="leading-relaxed flex items-center gap-1">
-              Download
-              <Download />
-            </Button>
-          </form>
         </div>
       </div>
     </Gutter>

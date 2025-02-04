@@ -90,10 +90,10 @@ const Contact = (props: Props) => {
         <div className="w-full p-8 border border-[#cccccc30] rounded-md flex flex-col gap-4">
           {/* contact header */}
           <div className="flex flex-col gap-2 w-full ">
-            <h1 className="text-2xl font-semibold">Contact Us</h1>
+            <h1 className="text-2xl font-semibold">Contactez-nous</h1>
             <p className="text-base text-hover">
-              Need help or advice? Contact us by phone, e-mail, or visit us at
-              the pharmacy.
+              Besoin d'aide ou de conseils ? Contactez-nous par téléphone,
+              e-mail, ou venez nous rendre visite à la pharmacie.
             </p>
           </div>
           {/* contact form */}

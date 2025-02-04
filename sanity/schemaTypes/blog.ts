@@ -12,19 +12,19 @@ export default {
     {
       name: "title",
       type: "string",
-      title: "Title of blog article",
+      title: "Titre de l'article",
     },
     {
       name: "slug",
       type: "slug",
-      title: "Slug of blog article",
+      title: "Slug de l'article",
       options: {
         source: "title",
       },
     },
     {
       name: "categories",
-      title: "Categories",
+      title: "Category de l'article",
       type: "array",
       of: [
         {
@@ -36,17 +36,17 @@ export default {
     {
       name: "image",
       type: "image",
-      title: "Image of blog article",
+      title: "Image de l'article",
     },
     {
       name: "description",
       type: "text",
-      title: "Description of blog article",
+      title: "Description de l'article",
     },
     {
       name: "content",
       type: "array",
-      title: "Content of blog article",
+      title: "Content de l'article",
       of: [
         {
           title: "Block",
